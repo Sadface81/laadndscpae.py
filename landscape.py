@@ -29,12 +29,18 @@ while running:
     # GAME STATE UPDATES
     # All game math and comparisons happen here
     cloud_x += 1
+    colour_change_speed= 1
+
 
 
     # DRAWING
+    red=25
+    green=133
+    blue=46
+   
     lightgreen= (54, 191, 81)
     midgreen= (45, 156, 67)
-    darkgreen=(25, 133, 46)
+    darkgreen=(red, green, blue)
     brown= (150, 75, 29)
     darkbrown= (92, 57, 19)
     pine= (19, 92, 45)
@@ -65,10 +71,18 @@ while running:
     pygame.draw.polygon(screen, (darkbrown), [(457, 130), (637, 219), (278, 218)])
     pygame.draw.polygon(screen, (darkbrown), [(372, 234), (455, 173), (546, 236)])
     pygame.draw.rect(screen, (darkbrown), (430, 249, 50, 75))
+
+while green > 0:
+        green-=colour_change_speed
+
+
+while red < 255:
+        red+=colour_change_speed
+    
     # Must be the last two lines
     # of the game loop
-    pygame.display.flip()
-    clock.tick(30)
+pygame.display.flip()
+clock.tick(30)
 
 #duck
 
