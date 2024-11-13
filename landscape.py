@@ -71,6 +71,11 @@ while running:
     pygame.draw.polygon(screen, (darkbrown), [(457, 130), (637, 219), (278, 218)])
     pygame.draw.polygon(screen, (darkbrown), [(372, 234), (455, 173), (546, 236)])
     pygame.draw.rect(screen, (darkbrown), (430, 249, 50, 75))
+#cloud
+
+ pygame.draw.circle(screen, (255, 255, 255), (cloud_x, 100), 40)
+    pygame.draw.circle(screen, (255, 255, 255), (cloud_x + 34, 80), 40)
+    pygame.draw.circle(screen, (255, 255, 255), (cloud_x + 45, 100), 40)
 
 while green > 0:
         green-=colour_change_speed
